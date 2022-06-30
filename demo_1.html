@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>Demo_1</title>
+		<meta charset="utf8" />
+		<style>
+			/*Данный блок отвечает за окраску заколовков h1 в указанный цвет*/
+			h1 {
+			color:#9FFF00;
+			}
+		</style>
+		<script>
+			// функция для Домашнего задания №1 варианта №1
+			function sayHello() {
+				document.getElementById("hdr1").innerText="Мяу!";
+				document.getElementById("hdr1").style.color="red";
+			}
+			// функция для Домашнего задания №1 варианта №2 
+			function sayHello2() {
+				document.getElementById("hdr2").innerText="Мяу!";
+				document.getElementById("hdr2").style.color="red";
+			}
+			function sayHello3() {
+				document.getElementById("hdr2").innerText="Кошки - пуштые комочки счастья.";
+				document.getElementById("hdr2").style.color="#9FFF00";
+			}
+		</script>
+	</head>
+	<body>
+		<a href="start.html">Возврат на стартовую страницу</a>
+		<h1><span>Добро пожаловать на котосайт!</span></h1>
+		<p>Ниже представленный несколько необычных пород кошек.</p>
+		<a href="images/kun.jpeg"><p>1. Мейн-кун</p></a>
+		<a href="images/sfinks.jpg"><p>2. Сфинкс</p></a>
+		<a href="images/bengal.jpeg"><p>3. Бенгальская кошка</p></a>
+		<a href="images/brit.jpg"><p>4. Британская короткошерстная</p></a>
+		<h3>Ниже приведены несколько поисковых ресурсов<h3>
+		<a href="https://www.google.com"><button>Google</button></a><a href="https://www.yandex.ru"><button>Yandex</button></a><a href="https://www.microsoft.com"><button>Microsoft</button></a>
+		<!-- Вариант №1 -->
+		<p>Выполнение домашнего задания №1, вариант 1.</p>
+		<p>Нажми на картинку с котом</p>
+		<h1 id="hdr1">Кошки - пуштые комочки счастья.</h1>
+		<p><img src="images/cat.jpg" style="width:300px" onclick="sayHello();"/></p>
+		<!-- Вариант №2 -->
+		<p>Выполнение домашнего задания №1, вариант 2.</p>
+		<a>Наведи курсор на кортинку с котом, а затем убери курсор с картинки</a>
+		<h1 id="hdr2">Кошки - пуштые комочки счастья.</h1>
+		<p><img src="images/cat.jpg" style="width:300px" onmouseenter="sayHello2()"; onmouseout="sayHello3()";/></p>
+		<!-- Вариант №3 -->
+		<p>Выполнение домашнего задания №1, вариант 3.</p>
+		<a>Наведи курсор на кортинку с котом, и вы усышите, как он мяукает</a>
+		<h1 id="hdr2">Кошки - пуштые комочки счастья.</h1>
+		<p><img src="images/cat.jpg" style="width:300px" onmouseenter="new Audio('sound/murr.mp3').play()";/></p>
+	</body>	
+</html>
