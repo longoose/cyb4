@@ -10,7 +10,9 @@
    // date_default_timezone_set("Europe/Moscow");
    // $now_1 = time();
    // $now = date("H:i:s");
-    $sql = "INSERT INTO Calcs(Num1,Num2,User,TimeStamp1) Values ($x,$y,'Anonym',CURRENT_TIMESTAMP())";
-    mysqli_query($conn,$sql);
+    $sql = "INSERT INTO Calcs(Num1,Num2,User,TimeStamp1) Values (?,?,?,CURRENT_TIMESTAMP())";
+    $stat = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stat, "ssss", $x, $y, 'Anonym');
+    mysqli_stmt_execute($stat);
     mysqli_close($conn);
     echo $z;
